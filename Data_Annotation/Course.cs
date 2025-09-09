@@ -18,5 +18,10 @@ namespace AssignmentC_EFCORE.Data_Annotation
         public int Duration { get; set; }
         [ForeignKey("Topic")]
         public int TopID { get; set; }
+
+        public Topic Topic { get; set; }
+
+        public List<StudCourse> StudCourses { get; set; }
+        public List<CourseInst> CourseInsts { get; set; }
     }
 }

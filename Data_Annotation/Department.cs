@@ -17,5 +17,8 @@ namespace AssignmentC_EFCORE.Data_Annotation
         public DateTime HiringDate { get; set; }
         [ForeignKey("Instructor")]
         public int InsID { get; set; }
+        public Instructor Instructor { get; set; }
+        public List<Student> Students { get; set; }
+        public List<Instructor> Instructors { get; set; }
     }
 }

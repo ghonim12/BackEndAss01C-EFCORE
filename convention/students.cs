@@ -14,5 +14,7 @@ namespace AssignmentC_EFCORE.convention
         public string Address { get; set; }
         public int Age { get; set; }
         public int DeptID { get; set; }
+        public Department Departments { get; set; }
+        public List<StudCourse> StudCourses { get; set; }
     }
 }

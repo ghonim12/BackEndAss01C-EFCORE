@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace AssignmentC_EFCORE.FluentApis
 {
-    internal class Student
+    public class Student
     {
         public int StudID { get; set; }
         public string FName { get; set; }
@@ -16,5 +16,7 @@ namespace AssignmentC_EFCORE.FluentApis
         public string Address { get; set; }
         public int Age { get; set; }
         public int DeptID { get; set; }
+        public Department Departments { get; set; }
+        public List<StudCourse> StudCourses { get; set; }
     }
 }

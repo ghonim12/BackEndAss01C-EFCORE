@@ -13,5 +13,7 @@ namespace AssignmentC_EFCORE.Data_Annotation
         public int TopID { get; set; }
         [Required, MaxLength(50)]
         public string Name { get; set; }
+        public List<Course> Courses { get; set; }
+
     }
 }

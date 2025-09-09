@@ -10,5 +10,8 @@ namespace AssignmentC_EFCORE.convention
     {
         public int TopID { get; set; }
         public string Name { get; set; }
+
+        // One-to-Many
+        public List<Course> Courses { get; set; }
     }
 }

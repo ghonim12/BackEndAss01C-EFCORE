@@ -15,6 +15,10 @@ namespace AssignmentC_EFCORE.convention
         public string Address { get; set; }
         public int HourRate { get; set; }
         public int DeptID { get; set; }
+        public Department Department { get; set; }
+
+        // Many-to-Many
+        public List<CourseInst> CourseInsts { get; set; }
 
     }
 }

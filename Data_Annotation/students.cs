@@ -20,6 +20,9 @@ namespace AssignmentC_EFCORE.Data_Annotation
         [Range(18,60)]
         public int Age { get; set; }
         [ForeignKey("Department")]
-        public int DeptID { get; set; }
+        public int Dep_Id { get; set; }
+        public Department Department { get; set; }
+        // Many-to-Many
+        public List<StudCourse> StudCourses { get; set; }
     }
 }

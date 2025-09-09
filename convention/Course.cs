@@ -13,5 +13,11 @@ namespace AssignmentC_EFCORE.convention
         public string Description { get; set; }
         public int Duration { get; set; }
         public int TopID { get; set; }
+        // FK
+        public Topic Topic { get; set; }
+
+        // Many-to-Many
+        public List<StudCourse> StudCourses { get; set; }
+        public List<CourseInst> CourseInsts { get; set; }
     }
 }

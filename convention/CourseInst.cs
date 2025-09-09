@@ -9,7 +9,9 @@ namespace AssignmentC_EFCORE.convention
     internal class CourseInst
     {
         public int InstID { get; set; }
+        public Instructor Instructor { get; set; }
         public int CourID { get; set; }
+        public Course Course { get; set; }
         public string Evaluate { get; set; }
     }
 }

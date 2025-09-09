@@ -12,8 +12,10 @@ namespace AssignmentC_EFCORE.Data_Annotation
     {
         [Key, Column(Order = 0)]
         public int InstID { get; set; }
+        public Instructor Instructors { get; set; }
         [Key, Column(Order = 1)]
         public int CourID { get; set; }
+        public Course Courses { get; set; }
         public string Evaluate { get; set; }
     }
 }

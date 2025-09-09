@@ -20,6 +20,9 @@ namespace AssignmentC_EFCORE.Data_Annotation
         public int HourRate { get; set; }
         [ForeignKey("Department")]
         public int DeptID { get; set; }
+        public Department Department { get; set; }
+
+        public List<CourseInst> CourseInsts { get; set; }
 
     }
 }

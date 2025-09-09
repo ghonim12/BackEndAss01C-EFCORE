@@ -61,17 +61,30 @@ namespace AssignmentC_EFCORE.FluentApis
             });
 
             // StudCourse (Composite Key)
-            modelBuilder.Entity<StudCourse>(entity =>
-            {
-                entity.HasKey(sc => new { sc.StudID, sc.CourID });
-            });
+            modelBuilder.Entity<StudCourse>(entity =>entity.HasKey(sc => new { sc.StudID, sc.CourID }));
+
+            modelBuilder.Entity<StudCourse>()
+                        .HasOne(sc => sc.Student)
+                        .WithMany(s => s.StudCourses)
+                        .HasForeignKey(sc => sc.StudID);
+
+            modelBuilder.Entity<StudCourse>()
+                        .HasOne(sc => sc.Course)
+                        .WithMany(c => c.StudCourses)
+                        .HasForeignKey(sc => sc.CourID);
 
             // CourseInst (Composite Key)
-            modelBuilder.Entity<CourseInst>(entity =>
-            {
-                entity.HasKey(ci => new { ci.InstID, ci.CourID });
-            });
+            modelBuilder.Entity<CourseInst>(entity =>entity.HasKey(ci => new { ci.InstID, ci.CourID }));
 
+            modelBuilder.Entity<CourseInst>()
+                        .HasOne(ci => ci.Instructor)
+                        .WithMany(i => i.CourseInsts)
+                        .HasForeignKey(ci => ci.InstID);
+
+            modelBuilder.Entity<CourseInst>()
+                        .HasOne(ci => ci.Course)
+                        .WithMany(c => c.CourseInsts)
+                        .HasForeignKey(ci => ci.CourID);
 
         }
     }

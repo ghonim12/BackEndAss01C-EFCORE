@@ -7,9 +7,11 @@ using System.Threading.Tasks;
 
 namespace AssignmentC_EFCORE.FluentApis
 {
-    internal class Topic
+    public class Topic
     {
         public int TopID { get; set; }
         public string Name { get; set; }
+        public List<Course> Courses { get; set; }
+
     }
 }

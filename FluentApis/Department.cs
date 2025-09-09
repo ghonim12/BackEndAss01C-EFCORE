@@ -8,11 +8,17 @@ using System.Threading.Tasks;
 
 namespace AssignmentC_EFCORE.FluentApis
 {
-    internal class Department
+    public class Department
     {
         public int DeptID { get; set; }
         public string Name { get; set; }
         public DateTime HiringDate { get; set; }
-        public int InsID { get; set; }
+        // رئيس القسم
+        public int Ins_ID { get; set; }
+        public Instructor Instructor { get; set; }
+
+        // Relations
+        public List<Student> Students { get; set; }
+        public List<Instructor> Instructors { get; set; }
     }
 }
